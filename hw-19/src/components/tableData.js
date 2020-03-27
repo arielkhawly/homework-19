@@ -1,15 +1,18 @@
 const tableData = [
     {
+        id: 1,
         first_name: 'Jane',
         last_name: 'Lane',
         title: 'Engineer'
     },
     {
+        id: 2,
         first_name: 'John',
         last_name: 'Doe',
         title: 'Manager'
     },
     {
+        id: 3,
         first_name: 'Ariel',
         last_name: 'Khawly',
         title: 'Developer'
