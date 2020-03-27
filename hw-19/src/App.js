@@ -1,4 +1,4 @@
-import {React, Fragment} from 'react';
+import React, {Fragment} from 'react';
 import tableData from './components/tableData';
 import UserTable from './components/UserTable';
 import './App.css';
@@ -9,7 +9,6 @@ function App() {
   return (
 <Fragment>
     <TableFilter />
-</Fragment>
     <table>
       <thead>
         <th filterkey="first_name">First name</th>
