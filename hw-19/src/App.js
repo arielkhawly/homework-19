@@ -2,13 +2,13 @@ import React, {Fragment} from 'react';
 import tableData from './components/tableData';
 import UserTable from './components/UserTable';
 import './App.css';
-import TableFilter from './components/TableFilter';
+import TableNav from './components/TableNav';
 
 function App() {
   const employeeComponents = tableData.map((e) => <UserTable employee={e} />)
   return (
 <Fragment>
-    <TableFilter />
+    <TableNav />
     <table>
       <thead>
         <th filterkey="first_name">First name</th>
