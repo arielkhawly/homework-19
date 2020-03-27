@@ -13,17 +13,12 @@ class TableNav extends React.Component {
         this.setState({search: event.target.value});
     }
     render() {
-        // let filteredEmployees = this.props.tableData.filter((employee) => {
-        //     return employee.indexOf(this.state.search) !== -1;
-        // })
+        let filteredEmployees = this.props.tableData.filter((tableData) => {
+            return tableData.indexOf(this.state.search) !== -1;
+        })
 
         return (
             <div>
-                {/* <ul>
-                    {filteredEmployees.map((employee) => {
-                        return <UserTable employee={tableData.first_name}/>
-                    })}
-                </ul> */}
                 <div className="navbar">
                     <input type="text"  
                     placeholder="Search..."
