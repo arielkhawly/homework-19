@@ -10,7 +10,7 @@ function TableItem({ employee }) {
     )
 }
 
-function UserTable(props) {
+function UserTable({ employeeList }) {
     return (
         <table>
             <thead>
@@ -19,7 +19,7 @@ function UserTable(props) {
                 <th filterkey="title">Title</th>
             </thead>
             <tbody>
-                {tableData.map((e, i) => <TableItem key={i} employee={e} />)}
+                {employeeList.map((e, i) => <TableItem key={i} employee={e} />)}
             </tbody>
         </table>
     )
