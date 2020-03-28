@@ -6,16 +6,8 @@ function TableNav() {
     const [search, setSearch] = useState('');
     const updateSearch = (event) => {
         setSearch(event.target.value.toLowerCase());
-        filterEmployees();
     }
-    const filterEmployees = () => {
-        if (search === '') {
-            return tableData
-        }
-        console.log(`search: ${search}`)
-        // return tableData.filter(({first_name}) => first_name.toLowerCase().includes(search))
-        console.log(tableData.filter(({first_name}) => first_name.toLowerCase().includes(search)))
-    }
+
     return (
         <Fragment>
             <div>
@@ -36,7 +28,7 @@ function TableNav() {
                     </div>
                 </div>
             </div>
-            <UserTable employeeList={tableData} />
+            <UserTable employeeList={tableData.filter(({ first_name }) => first_name.toLowerCase().includes(search))} />
         </Fragment>
 
     )
